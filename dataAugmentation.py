@@ -9,6 +9,7 @@ import cv2
 localMain = 'E:\CODANDO\FURB\BOBAGENS\Data-Augmentation\entry'
 path = (f'{localMain}')
 dirs = listdir(path)
+dpi = 299
 
 start = timeit.default_timer()
 for i in range(0, len(dirs)):
@@ -40,7 +41,7 @@ for i in range(0, len(dirs)):
                     bbox_inches='tight',
                     pad_inches=0,
                     format='jpg',
-                    dpi=140)
+                    dpi=dpi)
 
     # Zoom
     datagen = ImageDataGenerator(zoom_range=[0.5, 1.0])
@@ -55,7 +56,7 @@ for i in range(0, len(dirs)):
                     bbox_inches='tight',
                     pad_inches=0,
                     format='jpg',
-                    dpi=140)
+                    dpi=dpi)
 
     # Deslocamento
     datagen = ImageDataGenerator(width_shift_range=[-200, 200])
@@ -70,7 +71,7 @@ for i in range(0, len(dirs)):
                     bbox_inches='tight',
                     pad_inches=0,
                     format='jpg',
-                    dpi=140)
+                    dpi=dpi)
 
 end = timeit.default_timer()
 print('Tempo de processamento: %f segundos' % (end - start))
