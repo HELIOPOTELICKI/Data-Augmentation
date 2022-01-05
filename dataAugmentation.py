@@ -33,7 +33,7 @@ def main():
 
 if __name__ == '__main__':
     # Path da pasta de entrada
-    localMain = 'E:\CODANDO\FURB\BOBAGENS\Data-Augmentation\entry'
+    localMain = 'E:\CODANDO\RANDOMS\Data-Augmentation\entry'
     out = 'out'
 
     path = (f'{localMain}')
